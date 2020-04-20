@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanilla Js Weather</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="sidebar">
+      <div class="sidebar-inner">
+        <img id="main-img" src="" alt="">
+        <div id="description"></div> 
+        <div id="temp"></div>
+        <div id="city"></div>
+      </div>
+    </div>
+    <div class="content">
+      <input type="text" class="search" placeholder="Enter your city name">
+      <h2>Search Result</h2>
+      <div class="item">
+        <h3>Dhaka</h3>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
