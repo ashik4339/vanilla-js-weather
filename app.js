@@ -7,6 +7,7 @@ const mainImg = document.getElementById('main-img');
 const temp = document.getElementById('temp');
 const city = document.getElementById('city');
 const description = document.getElementById('description');
+const search = document.getElementById('search');
 
 window.onload = () => {
   navigator.geolocation.getCurrentPosition(
@@ -17,6 +18,16 @@ window.onload = () => {
       getWeatherData();
     }
   );
+  search.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+      if (e.target.value) {
+        getWeatherData(e.target.value);
+      } else {
+        alert('Please enter valid city name');
+      }
+      e.target.value = '';
+    }
+  });
 };
 
 getWeatherData = (city = DEFAULT_CITY, coords) => {

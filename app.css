@@ -32,7 +32,7 @@ body {
   padding: 100px;
 }
 
-.search {
+#search {
   display: block;
   margin: auto;
   border: none;
